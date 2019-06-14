@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>swift on @carlogilmar</title>
+    <link>https://carlogilmar.github.io/blog/categories/swift/</link>
+    <description>Recent content in swift on @carlogilmar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
+    <lastBuildDate>Wed, 29 Nov 2017 09:13:50 -0600</lastBuildDate>
+    
+	<atom:link href="https://carlogilmar.github.io/blog/categories/swift/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fibonacci Sequence Review with Swift</title>
+      <link>https://carlogilmar.github.io/blog/blog/fibonacci/</link>
+      <pubDate>Wed, 29 Nov 2017 09:13:50 -0600</pubDate>
+      
+      <guid>https://carlogilmar.github.io/blog/blog/fibonacci/</guid>
+      <description>Fibonacci Sequence With Swift 4.0 One of the firsts examples is the Fibonacci Sequence, although It’s a common programming problem, also It’s a curious problem for be solve with swift.
+This is a sequence of numbers, which start in the third element as the sum of the previous two numbers. The next number is the sum of the previous two numbers too.
+ 0, 1, (0+1), (1 + (0+1))</description>
+    </item>
+    
+    <item>
+      <title>First iOS App: Sending Messages to Slack</title>
+      <link>https://carlogilmar.github.io/blog/blog/first-ios-app/</link>
+      <pubDate>Fri, 29 Sep 2017 00:23:08 -0500</pubDate>
+      
+      <guid>https://carlogilmar.github.io/blog/blog/first-ios-app/</guid>
+      <description>Hey! I have been learning how to program swift because I want to write iOS apps.
+For the first, I considered start with recognize my previous concepts in this new language for me, here is my &amp;ldquo;fizzbuzz&amp;rdquo; example:
+ My guide to learn Swift and iOS are the follow videos and books:
+ Swift Mastering The Core Concepts Building iOS 10 Applications with Swift iOS Programming The Big Nerd Ranch Guide 6Th Edition  My First App First, I need to understand this:</description>
+    </item>
+    
+  </channel>
+</rss>

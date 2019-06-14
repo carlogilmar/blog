@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/learning-iot/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/elixir/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/iot/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/phoenix/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/programming/</loc>
+    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/learning-swift/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/swift/</loc>
+    <lastmod>2018-07-05T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/ember-call/</loc>
+    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/ember/</loc>
+    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/javascript/</loc>
+    <lastmod>2018-05-14T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/learning-puppet/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/devops/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/puppet/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/ruby/</loc>
+    <lastmod>2018-05-07T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/ember-first/</loc>
+    <lastmod>2018-05-03T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/effectivejenkins/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/devops/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/jenkins/</loc>
+    <lastmod>2018-04-17T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/learning-ember/</loc>
+    <lastmod>2018-04-11T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/elixir-process/</loc>
+    <lastmod>2018-04-02T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/phoenix-sockets/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/elixir/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/phoenix/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/programming/</loc>
+    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/elixir_first/</loc>
+    <lastmod>2018-03-03T09:13:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/github/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/emberjs/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/community/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/developer/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/ember/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/github/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/javascript/</loc>
+    <lastmod>2018-02-15T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/fibonacci/</loc>
+    <lastmod>2017-11-29T09:13:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/swift/</loc>
+    <lastmod>2017-11-29T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/openspace/</loc>
+    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/agile/</loc>
+    <lastmod>2017-11-13T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/unam-cultura/</loc>
+    <lastmod>2017-10-16T14:04:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/scrum/</loc>
+    <lastmod>2017-10-16T14:04:47-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/mi-primera-clase/</loc>
+    <lastmod>2017-10-14T15:45:11-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/first-ios-app/</loc>
+    <lastmod>2017-09-29T00:23:08-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/ios/</loc>
+    <lastmod>2017-09-29T00:23:08-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/git-resume/</loc>
+    <lastmod>2017-07-29T00:23:08-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/git/</loc>
+    <lastmod>2017-07-29T00:23:08-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/vertx-basic/</loc>
+    <lastmod>2017-07-25T22:54:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/groovy/</loc>
+    <lastmod>2017-07-25T22:54:16-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/vertx/</loc>
+    <lastmod>2017-07-25T22:54:16-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/registros-graficos/</loc>
+    <lastmod>2017-05-22T18:41:12-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/graphic-recordings/</loc>
+    <lastmod>2017-05-22T18:41:12-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/visual-thinking/</loc>
+    <lastmod>2017-05-22T18:41:12-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/workshop-scrum/</loc>
+    <lastmod>2017-05-13T00:47:38-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/agiledaypuebla/</loc>
+    <lastmod>2017-01-22T15:45:11-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/programmer/</loc>
+    <lastmod>2017-01-17T22:51:32-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/tools/</loc>
+    <lastmod>2017-01-17T22:51:32-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/slack-webhook/</loc>
+    <lastmod>2016-10-09T14:04:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/slack/</loc>
+    <lastmod>2016-10-09T14:04:47-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/vertx_mongo_web/</loc>
+    <lastmod>2016-10-09T12:29:51-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/git_para_principiantes/</loc>
+    <lastmod>2016-09-26T21:22:27-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/prueba/</loc>
+    <lastmod>2016-09-18T19:52:16-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/tags/linux/</loc>
+    <lastmod>2016-09-18T19:52:16-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/hi/</loc>
+    <lastmod>2016-09-18T19:17:47-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/gohugo/</loc>
+    <lastmod>2016-09-18T19:17:47-05:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/scrumcourse/</loc>
+    <lastmod>2016-07-18T08:42:37-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/agileplanet/</loc>
+    <lastmod>2016-06-09T08:53:18-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/agileopen/</loc>
+    <lastmod>2016-06-02T09:01:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/proyectoagil/</loc>
+    <lastmod>2016-03-20T09:04:47-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/blog/exposwlibre/</loc>
+    <lastmod>2016-03-18T09:13:50-06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://carlogilmar.github.io/blog/categories/open-source/</loc>
+    <lastmod>2016-03-18T09:13:50-06:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

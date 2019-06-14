@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Fibonacci Sequence Review with Swift" />
+<meta property="og:description" content="Fibonacci Sequence With Swift 4.0 One of the firsts examples is the Fibonacci Sequence, although It’s a common programming problem, also It’s a curious problem for be solve with swift.
+This is a sequence of numbers, which start in the third element as the sum of the previous two numbers. The next number is the sum of the previous two numbers too.
+ 0, 1, (0&#43;1), (1 &#43; (0&#43;1))" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://carlogilmar.github.io/blog/blog/fibonacci/" />
+<meta property="article:published_time" content="2017-11-29T09:13:50-06:00"/>
+<meta property="article:modified_time" content="2017-11-29T09:13:50-06:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Fibonacci Sequence Review with Swift"/>
+<meta name="twitter:description" content="Fibonacci Sequence With Swift 4.0 One of the firsts examples is the Fibonacci Sequence, although It’s a common programming problem, also It’s a curious problem for be solve with swift.
+This is a sequence of numbers, which start in the third element as the sum of the previous two numbers. The next number is the sum of the previous two numbers too.
+ 0, 1, (0&#43;1), (1 &#43; (0&#43;1))"/>
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Fibonacci Sequence Review with Swift",
+  "url": "https:\/\/carlogilmar.github.io\/blog\/blog\/fibonacci\/",
+  "wordCount": "389",
+  "datePublished": "2017-11-29T09:13:50-06:00",
+  "dateModified": "2017-11-29T09:13:50-06:00",
+  "author": {
+    "@type": "Person",
+    "name": "@carlogilmar"
+  },
+  "keywords": "swift, programming"
+}
+</script>
+
+
+
+    <link rel="canonical" href="https://carlogilmar.github.io/blog/blog/fibonacci/">
+
+    <title>Blog de Fibonacci Sequence Review with Swift | @carlogilmar</title>
+		<link rel="icon" type="image/png" href="https://carlogilmar.github.io/blog/img/carlogilmar.png">
+
+    
+    <!-- combined, minified CSS -->
+    <link href="https://carlogilmar.github.io/blog/css/style.css" rel="stylesheet" integrity="sha384-G5B34w7DFTumWTswxYzTX7NWfbvQEg1HbFFEg6ItN03uTAAoS2qkPS/fu3LhuuSA" crossorigin="anonymous">
+    
+
+    <!-- RSS 2.0 feed -->
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-90617617-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29fa38b43f.js"></script>
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="row" style="background-color: #001C20; height: 15px;"></div>
+    <div class="row" style="background-color: #F3A851; height: 15px;"></div>
+    
+
+    <div class="blog-masthead" style="background-color: #c2082a;">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="https://carlogilmar.github.io/blog/"><b>H O M E</b></a>
+        </nav>
+      </div>
+    </div>
+
+    
+
+    
+    
+    <header>
+      <div class="container">
+        <h1 style="font-family: 'Lobster', cursive;" dir="auto"><a href="https://carlogilmar.github.io/" rel="home">@carlogilmar</a></h1>
+        <p class="lead blog-description" dir="auto"><small>Blog for share my learning experience as software developer since 2016.</small></p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="https://carlogilmar.github.io/blog/blog/fibonacci/">Fibonacci Sequence Review with Swift</a></h2>
+    <p class="blog-post-meta"><time datetime="2017-11-29T09:13:50-06:00">Wed Nov 29, 2017</time> by @carlogilmar in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/blog/categories/swift" rel="category tag">swift</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/blog/tags/programming" rel="tag">programming</a>
+
+</p>
+  </header>
+  
+
+<h3 id="fibonacci-sequence-with-swift-4-0">Fibonacci Sequence With Swift 4.0</h3>
+
+<p>One of the firsts examples is the <strong>Fibonacci Sequence</strong>, although It’s a common programming problem, also It’s a curious problem for be solve with swift.</p>
+
+<p>This is a sequence of numbers, which start in the third element as the sum of the previous two numbers. The next number is the sum of the previous two numbers too.</p>
+
+<blockquote>
+<p>0, 1, (0+1), (1 + (0+1))</p>
+
+<p>0, 1, 1, 2, 3, 5, 8, 13</p>
+</blockquote>
+
+<h3 id="first-attempt">First Attempt</h3>
+
+<p>One of the common solutions for this problem is a recursive solution.</p>
+
+<p>This solution implement a recursive solution, if you want to know numbers less than 2, you will get the same number, but if you want to know other number more than 2, you have to start a recursive code. This is a very common solution, for example if you want to know the Fibonacci sequence for the number 4, you will <strong>call the function 9 times.</strong> Our tool for swift It’s going to help us to see this.</p>
+
+<p><img src="/blog/blog/fibonacci/uno.png" alt="" /></p>
+
+<h3 id="using-memoization">Using Memoization</h3>
+
+<blockquote>
+<p>“Memoization is a technique in which we store the results of computational tasks when they are completed”</p>
+
+<p>KOPEC, “Classic Computer Science Problems in Swift: Essential techniques for practicing programmers MEAP V04.”, Manning, 2017.</p>
+</blockquote>
+
+<p>For this second solution we are using a Dictionary for save the firsts elements.</p>
+
+<p><img src="/blog/blog/fibonacci/dos.png" alt="" /></p>
+
+<p>Using the number 4, if we want to know the 4th element in the sequence we only have to <strong>call the function only 3 times</strong>, because you are saving every element in the dictionary.</p>
+
+<h3 id="using-swift-for-solve-the-problem">Using swift for solve the problem</h3>
+
+<p>We have other option for find other solution.</p>
+
+<p>For example in Swift you can write this</p>
+
+<blockquote>
+<p>/<em>Pattern Matching</em>/</p>
+
+<p>let triple    = (1, 2, 3)</p>
+
+<p>let (x, y, z) = triple</p>
+</blockquote>
+
+<p>This solution is going to implement pattern matching. We have only two variables: last and next. They must be initialized with 0 and 1. So, the next step is create a loop with n times for iterate a tuple pattern matching.</p>
+
+<p><img src="/blog/blog/fibonacci/tres.png" alt="" /></p>
+
+<p>We are using pattern matching, and we aren’t using recursive anymore. What many times are we call the same function? Instead of this, we are  call a loop.</p>
+
+<p>Of course <strong>swift</strong> language have good tools for find new and simple solutions.</p>
+
+<p>This is my first review of a part of the book <a href="https://www.manning.com/books/classic-computer-science-problems-in-swift">Classic Computer Science Problems in Swift</a>.</p>
+
+<p>Thanks for reading!</p>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <nav class="nav sharing-icons">
+			<h4 style="font-family: 'Lobster', cursive;">share it</h4> &nbsp; &nbsp; &nbsp;
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fcarlogilmar.github.io%2fblog%2fblog%2ffibonacci%2f" title="Share on Facebook">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-facebook"></i> </span>
+	 		</a>
+
+			<a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcarlogilmar.github.io%2fblog%2fblog%2ffibonacci%2f" title="Share on LinkedIn">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-linkedin"></i> </span>
+			</a>
+
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=https%3a%2f%2fcarlogilmar.github.io%2fblog%2fblog%2ffibonacci%2f&amp;text=Fibonacci%20Sequence%20Review%20with%20Swift" title="Tweet this">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-twitter-square"></i> </span>
+			</a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "carlogilmar-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module text-center">
+    <img src="https://carlogilmar.github.io/blog/img/carlogilmar.png" width="100%"/>
+		<p>
+		<a href="https://github.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-github"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://twitter.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"><i class="fab fa-twitter"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://githubcampus.expert/carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-font-awesome-flag"></i> </span>
+		</a>
+		&nbsp;&nbsp;
+		<a href="https://medium.com/@carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-medium"></i> </span>
+		</a>
+		</p>
+
+		<a href="http://carlogilmar.xyz/" class="btn text-white btn-sm" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-blog" aria-hidden="true"></i> Personal Site </span> </a>
+		<br>
+		<br>
+		<a href="http://carlogilmar.xyz/gallery" class="btn btn-sm text-white" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-camera-retro"></i> Gallery </span> </a>
+
+  </section>
+  
+
+	
+	  <section class="sidebar-module">
+    <h4 style="font-family: 'Lobster', cursive;" class="text-center">recent posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/blog/blog/learning-iot/"> <i class="fas fa-check"></i> Learning IoT: First Steps with Elixir</a></li>
+
+<li><a href="/blog/blog/learning-swift/"> <i class="fas fa-check"></i> Learning Swift</a></li>
+
+<li><a href="/blog/blog/ember-call/"> <i class="fas fa-check"></i> Ember 2018 Roadmap: A call for blog post</a></li>
+
+<li><a href="/blog/blog/learning-puppet/"> <i class="fas fa-check"></i> Learning Puppet</a></li>
+
+<li><a href="/blog/blog/ember-first/"> <i class="fas fa-check"></i> Ember JS First Steps</a></li>
+
+    </ol>
+  </section>
+
+	
+
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer" style="background-color: #c2082a;">
+      
+      <p style="color: #FFFFFF;">This blog was created in 2016 for share my experiencies, knowledge and learning experiences. <br> For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. <br> Thank you for visit my content. <br> <strong> Last updated: June, 2019.</strong></p>
+      
+    </footer>
+    <footer style="background-color:#F3A851;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    <footer style="background-color:#000000;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    
+
+  </body>
+
+</html>

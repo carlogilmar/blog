@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>open-source on @carlogilmar</title>
+    <link>https://carlogilmar.github.io/blog/categories/open-source/</link>
+    <description>Recent content in open-source on @carlogilmar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
+    <lastBuildDate>Fri, 18 Mar 2016 09:13:50 -0600</lastBuildDate>
+    
+	<atom:link href="https://carlogilmar.github.io/blog/categories/open-source/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Ponencia de Software Libre para UPIICSA</title>
+      <link>https://carlogilmar.github.io/blog/blog/exposwlibre/</link>
+      <pubDate>Fri, 18 Mar 2016 09:13:50 -0600</pubDate>
+      
+      <guid>https://carlogilmar.github.io/blog/blog/exposwlibre/</guid>
+      <description>Aquí comparto una ponencia que prensenté el año pasado en Upiicsa, con apoyo de tres profesores que me cederieron sus clases, sobre el uso del Software Libre y algunas de sus bondades que podríamos usar.
+Dudas, aclaraciones, comentarios también en carlogilmar12@gmail.com
+http://www.slideshare.net/karlogilmar1/ponencia-para-ipn-upiicsa</description>
+    </item>
+    
+  </channel>
+</rss>

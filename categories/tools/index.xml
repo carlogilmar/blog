@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>tools on @carlogilmar</title>
+    <link>https://carlogilmar.github.io/blog/categories/tools/</link>
+    <description>Recent content in tools on @carlogilmar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
+    <lastBuildDate>Tue, 17 Jan 2017 22:51:32 -0600</lastBuildDate>
+    
+	<atom:link href="https://carlogilmar.github.io/blog/categories/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Las herramientas básicas de un desarrollador de Software</title>
+      <link>https://carlogilmar.github.io/blog/blog/programmer/</link>
+      <pubDate>Tue, 17 Jan 2017 22:51:32 -0600</pubDate>
+      
+      <guid>https://carlogilmar.github.io/blog/blog/programmer/</guid>
+      <description>Hace poco recordaba sobre todo lo que he aprendido el los últimos seis meses como aprendiz de programador, entre estas reflexiones pensaba sobre los elementos básicos que debía tener cualquier persona que se quisiera dedicar enserio al desarrollo profesional de software.
+Creo que el tema da para muchísimos temas, pero uno fundamental del que quiero hablar es el de las herramientas. En este momento creo que la elección de tus herramientas de trabajo definen también el ritmo de tú trabajo.</description>
+    </item>
+    
+  </channel>
+</rss>

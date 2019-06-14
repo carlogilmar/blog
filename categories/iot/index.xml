@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>iot on @carlogilmar</title>
+    <link>https://carlogilmar.github.io/blog/categories/iot/</link>
+    <description>Recent content in iot on @carlogilmar</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
+    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://carlogilmar.github.io/blog/categories/iot/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Learning IoT: First Steps with Elixir</title>
+      <link>https://carlogilmar.github.io/blog/blog/learning-iot/</link>
+      <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
+      
+      <guid>https://carlogilmar.github.io/blog/blog/learning-iot/</guid>
+      <description>Recently I have the opportunity to give a conference in the Startup Week in Mexico City. So I decided talk about Internet of things, because I was learning this using an Arduino and a Raspberry Pi.
+DEMO Connect Everything! The project is create a simple web application for create distribuid music. I was inspired in the Launchpad App and the Smartphone Symphony.
+I planned make this using Phoenix Framework, and connect an Arduino for play the music.</description>
+    </item>
+    
+  </channel>
+</rss>
