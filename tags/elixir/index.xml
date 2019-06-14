@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>elixir on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/tags/elixir/</link>
+    <link>http://carlogilmar.xyz/blog/tags/elixir/</link>
     <description>Recent content in elixir on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/tags/elixir/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning IoT: First Steps with Elixir</title>
-      <link>https://carlogilmar.github.io/blog/blog/learning-iot/</link>
+      <link>http://carlogilmar.xyz/blog/posts/learning-iot/</link>
       <pubDate>Wed, 12 Sep 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/learning-iot/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/learning-iot/</guid>
       <description>Recently I have the opportunity to give a conference in the Startup Week in Mexico City. So I decided talk about Internet of things, because I was learning this using an Arduino and a Raspberry Pi.
 DEMO Connect Everything! The project is create a simple web application for create distribuid music. I was inspired in the Launchpad App and the Smartphone Symphony.
 I planned make this using Phoenix Framework, and connect an Arduino for play the music.</description>
@@ -25,10 +25,10 @@ I planned make this using Phoenix Framework, and connect an Arduino for play the
     
     <item>
       <title>Process in Elixir: A Simple Example</title>
-      <link>https://carlogilmar.github.io/blog/blog/elixir-process/</link>
+      <link>http://carlogilmar.xyz/blog/posts/elixir-process/</link>
       <pubDate>Mon, 02 Apr 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/elixir-process/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/elixir-process/</guid>
       <description>In the last days I have been learning about Process in Elixir. After doing some exercises and understand some things about it, I can explain how to create a simple example about process.
 The Process Work with process in Elixir is so common, so, it’s important know how to use it. For create a process you can use spawn (which takes a function).
  The process structure is very simple: you have a mailbox, created within a function and by the word receive, and you can manage different messages and do something.</description>

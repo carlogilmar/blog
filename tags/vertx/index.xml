@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vertx on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/tags/vertx/</link>
+    <link>http://carlogilmar.xyz/blog/tags/vertx/</link>
     <description>Recent content in vertx on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Tue, 25 Jul 2017 22:54:16 -0500</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/tags/vertx/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/tags/vertx/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Develop with VertX</title>
-      <link>https://carlogilmar.github.io/blog/blog/vertx-basic/</link>
+      <link>http://carlogilmar.xyz/blog/posts/vertx-basic/</link>
       <pubDate>Tue, 25 Jul 2017 22:54:16 -0500</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/vertx-basic/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/vertx-basic/</guid>
       <description>This was a post writted for Making Devs Blog. Recently we use the project Vertx for develop a project. Now I&amp;rsquo;m going to talk about the basic functionality.
  VertX is a tool-kit for building reactive applications on the JVM.
  It has many interesting features:
@@ -26,10 +26,10 @@
     
     <item>
       <title>Connect Vertx with MongoDB using Groovy</title>
-      <link>https://carlogilmar.github.io/blog/blog/vertx_mongo_web/</link>
+      <link>http://carlogilmar.xyz/blog/posts/vertx_mongo_web/</link>
       <pubDate>Sun, 09 Oct 2016 12:29:51 -0500</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/vertx_mongo_web/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/vertx_mongo_web/</guid>
       <description>Create a Simple Connection With Vertx, MongoDB and Groovy  You have to install VertX 3.3.3, Groovy, and Mongo DB.
  Create a simple groovy script
  Include the next imports

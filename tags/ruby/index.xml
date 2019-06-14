@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ruby on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/tags/ruby/</link>
+    <link>http://carlogilmar.xyz/blog/tags/ruby/</link>
     <description>Recent content in ruby on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Mon, 07 May 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/tags/ruby/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning Puppet</title>
-      <link>https://carlogilmar.github.io/blog/blog/learning-puppet/</link>
+      <link>http://carlogilmar.xyz/blog/posts/learning-puppet/</link>
       <pubDate>Mon, 07 May 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/learning-puppet/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/learning-puppet/</guid>
       <description>Learning Puppet Hi! Recently I was reviewing two courses about Jenkins, so I had to use Vagrant for configure my environment, also I used other tools as Puppet.
 In the developer day is very common configure linux servers for a lot of things: install a Jenkins, prepare the deploy environments, etc… Well, Puppet can help us to configure this servers, as a improve script shell. In this post I’m going to talk about the first steps for use Puppet.</description>
     </item>

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ios on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/tags/ios/</link>
+    <link>http://carlogilmar.xyz/blog/tags/ios/</link>
     <description>Recent content in ios on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Fri, 29 Sep 2017 00:23:08 -0500</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/tags/ios/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/tags/ios/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>First iOS App: Sending Messages to Slack</title>
-      <link>https://carlogilmar.github.io/blog/blog/first-ios-app/</link>
+      <link>http://carlogilmar.xyz/blog/posts/first-ios-app/</link>
       <pubDate>Fri, 29 Sep 2017 00:23:08 -0500</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/first-ios-app/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/first-ios-app/</guid>
       <description>Hey! I have been learning how to program swift because I want to write iOS apps.
 For the first, I considered start with recognize my previous concepts in this new language for me, here is my &amp;ldquo;fizzbuzz&amp;rdquo; example:
  My guide to learn Swift and iOS are the follow videos and books:

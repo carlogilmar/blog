@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Phoenix Simple App using Web Sockets" />
+<meta property="og:description" content="Hi! This post is for explain how to create a simple application with Phoenix and Elixir using Web Sockets.
+Web Sockets  The Web Socket protocol based on TCP produce a bidirectional communication between client-server app, and it doesn’t need to use HTTP protocols.
+ I created a phoenix project without ecto mix phx.new sampler --no-ecto for show a simple connection using web sockets.
+Create the two-way communication For start, we have to create the communication through the web socket." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://carlogilmar.xyz/blog/posts/phoenix-sockets/" />
+<meta property="article:published_time" content="2018-03-30T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-03-30T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Phoenix Simple App using Web Sockets"/>
+<meta name="twitter:description" content="Hi! This post is for explain how to create a simple application with Phoenix and Elixir using Web Sockets.
+Web Sockets  The Web Socket protocol based on TCP produce a bidirectional communication between client-server app, and it doesn’t need to use HTTP protocols.
+ I created a phoenix project without ecto mix phx.new sampler --no-ecto for show a simple connection using web sockets.
+Create the two-way communication For start, we have to create the communication through the web socket."/>
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Phoenix Simple App using Web Sockets",
+  "url": "http:\/\/carlogilmar.xyz\/blog\/posts\/phoenix-sockets\/",
+  "wordCount": "536",
+  "datePublished": "2018-03-30T00:00:00\x2b00:00",
+  "dateModified": "2018-03-30T00:00:00\x2b00:00",
+  "author": {
+    "@type": "Person",
+    "name": "@carlogilmar"
+  },
+  "keywords": "elixir, programming, phoenix"
+}
+</script>
+
+
+
+    <link rel="canonical" href="http://carlogilmar.xyz/blog/posts/phoenix-sockets/">
+
+    <title>Blog de Phoenix Simple App using Web Sockets | @carlogilmar</title>
+		<link rel="icon" type="image/png" href="http://carlogilmar.xyz/blog/img/carlogilmar.png">
+
+    
+    <!-- combined, minified CSS -->
+    <link href="http://carlogilmar.xyz/blog/css/style.css" rel="stylesheet" integrity="sha384-G5B34w7DFTumWTswxYzTX7NWfbvQEg1HbFFEg6ItN03uTAAoS2qkPS/fu3LhuuSA" crossorigin="anonymous">
+    
+
+    <!-- RSS 2.0 feed -->
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-90617617-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29fa38b43f.js"></script>
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="row" style="background-color: #001C20; height: 15px;"></div>
+    <div class="row" style="background-color: #F3A851; height: 15px;"></div>
+    
+
+    <div class="blog-masthead" style="background-color: #c2082a;">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="http://carlogilmar.xyz/blog/"><b>H O M E</b></a>
+        </nav>
+      </div>
+    </div>
+
+    
+
+    
+    
+    <header>
+      <div class="container">
+        <h1 style="font-family: 'Lobster', cursive;" dir="auto"><a href="http://carlogilmar.xyz/" rel="home">@carlogilmar</a></h1>
+        <p class="lead blog-description" dir="auto"><small>Blog for share my learning experience as software developer since 2016.</small></p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="http://carlogilmar.xyz/blog/posts/phoenix-sockets/">Phoenix Simple App using Web Sockets</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-03-30T00:00:00Z">Fri Mar 30, 2018</time> by @carlogilmar in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/blog/categories/elixir" rel="category tag">elixir</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/blog/tags/programming" rel="tag">programming</a>, <a href="/blog/tags/phoenix" rel="tag">phoenix</a>
+
+</p>
+  </header>
+  
+
+<p>Hi! This post is for explain how to create a simple application with Phoenix and Elixir using Web Sockets.</p>
+
+<h3 id="web-sockets">Web Sockets</h3>
+
+<blockquote>
+<p>The Web Socket protocol based on TCP produce a bidirectional communication between client-server app, and it doesn’t need to use HTTP protocols.</p>
+</blockquote>
+
+<p>I created a phoenix project without ecto <code>mix phx.new sampler --no-ecto</code> for show a simple connection using web sockets.</p>
+
+<h3 id="create-the-two-way-communication">Create the two-way communication</h3>
+
+<p><img src="/blog/blog/phoenix/phoenix1.png" alt="" /></p>
+
+<p>For start, we have to create the communication through the web socket.</p>
+
+<p>We have to make the connection to phoenix in every browser through <code>channels</code> (phoenix Implementation for web sockets).</p>
+
+<p>For make this possible it’s necessary enable the Socket Library in <code>assets/js/app.js</code> , and you only have to uncomment the socket import.</p>
+
+<p>Then you have to join to the channel in <code>assets/js/socket.js</code>, we are going to print a console log with the response.  For this case the channel name is <strong>“example”.</strong></p>
+
+<pre><code class="language-js">socket.connect()
+
+let channel = socket.channel(&quot;example&quot;, {})
+
+channel.join()
+  .receive(&quot;ok&quot;, resp =&gt; { console.log(&quot;Joined to Example Channel!!&quot;, resp) })
+  .receive(&quot;error&quot;, resp =&gt; { console.log(&quot;Unable to join&quot;, resp) })
+
+</code></pre>
+
+<p>Until here, we are make a connection request to “example” channel, but now we have to create this channel for complete this connection.</p>
+
+<p>We have to create an elixir file with the channel in <code>lib/sample_web/channels/example.socket.ex</code></p>
+
+<p>The following function <code>join</code> allow the connection to <strong>“example”</strong> channel.</p>
+
+<pre><code class="language-elixir">defmodule Siample.ExampleChannel do
+
+  use Phoenix.Channel
+
+  def join(&quot;example&quot;, payload, socket) do
+    {:ok, socket}
+  end
+
+end
+</code></pre>
+
+<p>The last step is  update our <code>user_socket.ex</code>adding the next line:</p>
+
+<pre><code class="language-elixir">  ## Channels
+   channel &quot;example&quot;, SampleWeb.ExampleChannel
+
+</code></pre>
+
+<p>If we run the application and check the browser in <code>localhost:4000</code> we will see the connection result in the console.</p>
+
+<p><img src="/blog/blog/phoenix/demo1.png" alt="" /></p>
+
+<h3 id="sending-messages">Sending Messages</h3>
+
+<p>We have the connection created. So we can start to pass messages.</p>
+
+<p>In the client side we are going to send a simple message to <strong>”example:broadcast”</strong> channel.  We need the <code>channel</code>object (with the connection), and the channel direction <code>example:broadcast</code> and a message <code>{message:&quot;Hello Phoenix!&quot;}</code></p>
+
+<p><code>socket.js</code></p>
+
+<pre><code class="language-js">  channel.push('example:broadcast', {message:&quot;Hello Phoenix!&quot;})
+</code></pre>
+
+<p>In our example channel, we can create a function for response to this direction below to the <code>join</code> function.</p>
+
+<p><code>example_socket.ex</code></p>
+
+<pre><code>  def handle_in(&quot;example:broadcast&quot;, payload, socket) do
+    Logger.info &quot;:: Example:Broadcast receive a message!::&quot;
+    {:noreply, socket}
+  end
+</code></pre>
+
+<h3 id="sending-broadcast">Sending Broadcast</h3>
+
+<p><img src="/blog/blog/phoenix/phoenix2.png" alt="" /></p>
+
+<p>We can modify out last snippet for send a broadcast message to other channel <code>example:alert</code>adding: <code>broadcast! socket, &quot;example:alert&quot;, payload</code></p>
+
+<pre><code> def handle_in(&quot;example:broadcast&quot;, payload, socket) do
+    Logger.info &quot;:: Example:Broadcast receive a message!::&quot;
+    broadcast! socket, &quot;example:alert&quot;, payload
+    {:noreply, socket}
+  end
+</code></pre>
+
+<p>We are sending a message from elixir script to <strong>”example:alert”</strong>, we can create this channel in the client side.</p>
+
+<p>In our <code>socket.js</code>we can add this below to the channel join connection:</p>
+
+<pre><code class="language-js"> channel.on(&quot;example:alert&quot;, msg =&gt; {
+  alert(&quot;Can you see me?!!!!&quot;)
+ })
+</code></pre>
+
+<p><img src="/blog/blog/phoenix/phoenix3.png" alt="" /></p>
+
+<p>And this channel are going to receive all messages to <strong>”example:alert”</strong> direction. For this case we are sending a broadcast message, so, we can open many browsers and wait the alert when the message are sended. ( this appears when you reload your application in <code>localhost:4000</code>)</p>
+
+<p><img src="/blog/blog/phoenix/demo2.png" alt="" /></p>
+
+<h4 id="with-this-you-will-have-a-simple-application-using-sockets-connection-join-a-channel-in-client-side-sending-messages-and-broadcast-messages">With this you will have a simple application using sockets connection, join a channel in client side, sending messages and broadcast messages.</h4>
+
+<h5 id="this-is-very-simple-and-useful-recently-the-making-devs-team-develop-a-simple-type-racer-team-using-this-for-pass-messages-and-reload-the-sessions">This is very simple and useful, recently the Making Devs team develop a simple Type Racer team using this for pass messages and reload the sessions.</h5>
+
+<h4 id="you-could-see-the-complete-example-here-github-repository-https-github-com-carlogilmar-elixir-simple-socket">You could see the complete example here:  <a href="https://github.com/carlogilmar/Elixir-Simple-Socket">Github Repository</a></h4>
+
+<h3 id="thanks-for-reading">Thanks for reading!</h3>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <nav class="nav sharing-icons">
+			<h4 style="font-family: 'Lobster', cursive;">share it</h4> &nbsp; &nbsp; &nbsp;
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2fphoenix-sockets%2f" title="Share on Facebook">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-facebook"></i> </span>
+	 		</a>
+
+			<a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2fphoenix-sockets%2f" title="Share on LinkedIn">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-linkedin"></i> </span>
+			</a>
+
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2fphoenix-sockets%2f&amp;text=Phoenix%20Simple%20App%20using%20Web%20Sockets" title="Tweet this">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-twitter-square"></i> </span>
+			</a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "carlogilmar-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module text-center">
+    <img src="http://carlogilmar.xyz/blog/img/carlogilmar.png" width="100%"/>
+		<p>
+		<a href="https://github.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-github"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://twitter.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"><i class="fab fa-twitter"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://githubcampus.expert/carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-font-awesome-flag"></i> </span>
+		</a>
+		&nbsp;&nbsp;
+		<a href="https://medium.com/@carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-medium"></i> </span>
+		</a>
+		</p>
+
+		<a href="http://carlogilmar.xyz/" class="btn text-white btn-sm" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-blog" aria-hidden="true"></i> Personal Site </span> </a>
+		<br>
+		<br>
+		<a href="http://carlogilmar.xyz/gallery" class="btn btn-sm text-white" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-camera-retro"></i> Gallery </span> </a>
+
+  </section>
+  
+
+	
+	  <section class="sidebar-module">
+    <h4 style="font-family: 'Lobster', cursive;" class="text-center">recent posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/blog/posts/learning-iot/"> <i class="fas fa-check"></i> Learning IoT: First Steps with Elixir</a></li>
+
+<li><a href="/blog/posts/learning-swift/"> <i class="fas fa-check"></i> Learning Swift</a></li>
+
+<li><a href="/blog/posts/ember-call/"> <i class="fas fa-check"></i> Ember 2018 Roadmap: A call for blog post</a></li>
+
+<li><a href="/blog/posts/learning-puppet/"> <i class="fas fa-check"></i> Learning Puppet</a></li>
+
+<li><a href="/blog/posts/ember-first/"> <i class="fas fa-check"></i> Ember JS First Steps</a></li>
+
+    </ol>
+  </section>
+
+	
+
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer" style="background-color: #c2082a;">
+      
+      <p style="color: #FFFFFF;">This blog was created in 2016 for share my experiencies, knowledge and learning experiences. <br> For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. <br> Thank you for visit my content. <br> <strong> Last updated: June, 2019.</strong></p>
+      
+    </footer>
+    <footer style="background-color:#F3A851;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    <footer style="background-color:#000000;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    
+
+  </body>
+
+</html>

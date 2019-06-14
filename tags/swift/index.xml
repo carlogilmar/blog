@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>swift on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/tags/swift/</link>
+    <link>http://carlogilmar.xyz/blog/tags/swift/</link>
     <description>Recent content in swift on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Thu, 05 Jul 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/tags/swift/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/tags/swift/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Learning Swift</title>
-      <link>https://carlogilmar.github.io/blog/blog/learning-swift/</link>
+      <link>http://carlogilmar.xyz/blog/posts/learning-swift/</link>
       <pubDate>Thu, 05 Jul 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/learning-swift/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/learning-swift/</guid>
       <description>Learning Swift Recently I have been studying about Swift. I think that the learning experience is a wonderful resource for other persons who are in the same situation, so I consider valuable talk about this. First Steps When I start to learn swift I decide to watch videos and demonstrations about how to use the Xcode for build iOS apps, but, for be honest, I couldn’t understand some things: optionals, constrains, auto layout… This was my first experience.</description>
     </item>
     

@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>git on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/categories/git/</link>
+    <link>http://carlogilmar.xyz/blog/categories/git/</link>
     <description>Recent content in git on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Sat, 29 Jul 2017 00:23:08 -0500</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/categories/git/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/categories/git/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Resumen del Taller básico de Git</title>
-      <link>https://carlogilmar.github.io/blog/blog/git-resume/</link>
+      <link>http://carlogilmar.xyz/blog/posts/git-resume/</link>
       <pubDate>Sat, 29 Jul 2017 00:23:08 -0500</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/git-resume/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/git-resume/</guid>
       <description> Primera Parte Inicializando git y agregando usuario Primer Commit Segundo Commit Viendo diferencias y deshaciendo cambios Regresando a un commit Enviando a repositorio remoto </description>
     </item>
     
     <item>
       <title>Git para Principiantes</title>
-      <link>https://carlogilmar.github.io/blog/blog/git_para_principiantes/</link>
+      <link>http://carlogilmar.xyz/blog/posts/git_para_principiantes/</link>
       <pubDate>Mon, 26 Sep 2016 21:22:27 -0500</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/git_para_principiantes/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/git_para_principiantes/</guid>
       <description>Para iniciar&amp;hellip; Recientemente he descubierto el gran y amplio mundo que implica el uso de la herramienta Git para proyectos de software.
 Aún buscando entre tutoriales, y libros, el primer acercamiento es algo similar a lanzarse a un mar sin saber nadar, por ello mismo lo primero que hice fue hacer uso de la Facilitación Gráfica para poder contar con una historia que era Git y cómo funcionaba. Aquí va la primera entrega de lo que espero sean muchas.</description>
     </item>

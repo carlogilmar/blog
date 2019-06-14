@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>gohugo on @carlogilmar</title>
-    <link>https://carlogilmar.github.io/blog/categories/gohugo/</link>
+    <link>http://carlogilmar.xyz/blog/categories/gohugo/</link>
     <description>Recent content in gohugo on @carlogilmar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
     <lastBuildDate>Sun, 18 Sep 2016 19:17:47 -0500</lastBuildDate>
     
-	<atom:link href="https://carlogilmar.github.io/blog/categories/gohugo/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://carlogilmar.xyz/blog/categories/gohugo/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Adiós Wordpress y Hola Hugo</title>
-      <link>https://carlogilmar.github.io/blog/blog/hi/</link>
+      <link>http://carlogilmar.xyz/blog/posts/hi/</link>
       <pubDate>Sun, 18 Sep 2016 19:17:47 -0500</pubDate>
       
-      <guid>https://carlogilmar.github.io/blog/blog/hi/</guid>
+      <guid>http://carlogilmar.xyz/blog/posts/hi/</guid>
       <description>Hola Mundo
 Seguramente algunos habrán entrado a mi antiguo blog en CarloGilmar.Huelum.com, y pues ahora quedó indispuesto porque hallé a alguien mejor que Wordpress: Hugo.
 Por lo que tome la decisión de migrar el blog totalmente a lo que Hugo podía brindarme, que es más que suficiente para todo aquello que quiero compartir y estaré compartiendo por medio de esta nueva plataforma.

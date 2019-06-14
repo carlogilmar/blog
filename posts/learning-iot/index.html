@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Learning IoT: First Steps with Elixir" />
+<meta property="og:description" content="Recently I have the opportunity to give a conference in the Startup Week in Mexico City. So I decided talk about Internet of things, because I was learning this using an Arduino and a Raspberry Pi.
+DEMO Connect Everything! The project is create a simple web application for create distribuid music. I was inspired in the Launchpad App and the Smartphone Symphony.
+I planned make this using Phoenix Framework, and connect an Arduino for play the music." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://carlogilmar.xyz/blog/posts/learning-iot/" />
+<meta property="article:published_time" content="2018-09-12T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2018-09-12T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Learning IoT: First Steps with Elixir"/>
+<meta name="twitter:description" content="Recently I have the opportunity to give a conference in the Startup Week in Mexico City. So I decided talk about Internet of things, because I was learning this using an Arduino and a Raspberry Pi.
+DEMO Connect Everything! The project is create a simple web application for create distribuid music. I was inspired in the Launchpad App and the Smartphone Symphony.
+I planned make this using Phoenix Framework, and connect an Arduino for play the music."/>
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Learning IoT: First Steps with Elixir",
+  "url": "http:\/\/carlogilmar.xyz\/blog\/posts\/learning-iot\/",
+  "wordCount": "1293",
+  "datePublished": "2018-09-12T00:00:00\x2b00:00",
+  "dateModified": "2018-09-12T00:00:00\x2b00:00",
+  "author": {
+    "@type": "Person",
+    "name": "@carlogilmar"
+  },
+  "keywords": "programming, phoenix, iot, elixir"
+}
+</script>
+
+
+
+    <link rel="canonical" href="http://carlogilmar.xyz/blog/posts/learning-iot/">
+
+    <title>Blog de Learning IoT: First Steps with Elixir | @carlogilmar</title>
+		<link rel="icon" type="image/png" href="http://carlogilmar.xyz/blog/img/carlogilmar.png">
+
+    
+    <!-- combined, minified CSS -->
+    <link href="http://carlogilmar.xyz/blog/css/style.css" rel="stylesheet" integrity="sha384-G5B34w7DFTumWTswxYzTX7NWfbvQEg1HbFFEg6ItN03uTAAoS2qkPS/fu3LhuuSA" crossorigin="anonymous">
+    
+
+    <!-- RSS 2.0 feed -->
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-90617617-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29fa38b43f.js"></script>
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="row" style="background-color: #001C20; height: 15px;"></div>
+    <div class="row" style="background-color: #F3A851; height: 15px;"></div>
+    
+
+    <div class="blog-masthead" style="background-color: #c2082a;">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="http://carlogilmar.xyz/blog/"><b>H O M E</b></a>
+        </nav>
+      </div>
+    </div>
+
+    
+
+    
+    
+    <header>
+      <div class="container">
+        <h1 style="font-family: 'Lobster', cursive;" dir="auto"><a href="http://carlogilmar.xyz/" rel="home">@carlogilmar</a></h1>
+        <p class="lead blog-description" dir="auto"><small>Blog for share my learning experience as software developer since 2016.</small></p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="http://carlogilmar.xyz/blog/posts/learning-iot/">Learning IoT: First Steps with Elixir</a></h2>
+    <p class="blog-post-meta"><time datetime="2018-09-12T00:00:00Z">Wed Sep 12, 2018</time> by @carlogilmar in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/blog/categories/programming" rel="category tag">programming</a>, <a href="/blog/categories/phoenix" rel="category tag">phoenix</a>, <a href="/blog/categories/iot" rel="category tag">iot</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/blog/tags/elixir" rel="tag">elixir</a>
+
+</p>
+  </header>
+  
+
+<p><img src="/blog/blog/iot/uno.png" alt="" /></p>
+
+<p>Recently I have the opportunity to give a conference in the <a href="https://techstarsstartupweekmexicoc2018.sched.com/event/G1Kh/internet-of-things-primeros-pasos">Startup Week in Mexico City</a>. So I decided talk about Internet of things, because I was learning this using an <strong>Arduino</strong> and a <strong>Raspberry Pi</strong>.</p>
+
+<h3 id="demo-https-www-youtube-com-watch-v-me1tffhmppm-feature-youtu-be"><a href="https://www.youtube.com/watch?v=me1TFfHmpPM&amp;feature=youtu.be">DEMO</a></h3>
+
+<h2 id="connect-everything">Connect Everything!</h2>
+
+<p>The project is create a simple web application for create distribuid music. I was inspired in the <strong>Launchpad App</strong> and the <a href="https://www.youtube.com/watch?v=lEMG7ZayU48">Smartphone Symphony.</a></p>
+
+<p>I planned make this using <strong>Phoenix Framework</strong>, and connect an <strong>Arduino</strong> for play the music.</p>
+
+<h2 id="the-arduino">The Arduino</h2>
+
+<p>I use the arduino for built a circuit based on receipt and send signals using the serial port. This means that, for example, I send a message when I press a key from the membrane switch, or when the photo-resistance validate the light intensity.</p>
+
+<p>And when the circuit receives a signal, they could do something: turn on leds, etc. I used the <strong>Arduino IDE</strong> for test this circuit, for send and receive signals.</p>
+
+<p><img src="/blog/blog/iot/dos.png" alt="" /></p>
+
+<h2 id="the-raspberry-pi">The Raspberry-Pi</h2>
+
+<p>Although the <strong>Raspberry Pi</strong> have a <strong>GPIO</strong>, I think that is more convenient use with the <strong>Arduino</strong>, because It has more usability (analog pins, more digital pins). The greatest part about Raspberry is that you could have an entire SO!</p>
+
+<p>So I used the <strong>Raspbian SO</strong> for get a <strong>Linux SO</strong>. When you have a Linux you know that impossible is nothing.</p>
+
+<h2 id="elixir">Elixir</h2>
+
+<p>I decided to choose <strong>elixir</strong> for programming over the Raspberry Pi because I was learning elixir, and this could be a great opportunity for improve my skills using an embedded systems.</p>
+
+<h3 id="installing-elixir">Installing Elixir</h3>
+
+<p>Raspbian SO have a simple way to install elixir, although you will have the version 1.3 I used other package installer ASD for install the most recent version.</p>
+
+<p><a href="https://github.com/asdf-vm/asdf">ASD GitHub Repository</a></p>
+
+<h2 id="phoenix-app">Phoenix App</h2>
+
+<h4 id="genserver-implementation-for-get-a-sound">GenServer implementation for get a sound</h4>
+
+<p>The web app has planned for assign a different sound per user. For this I used the Channels for create sockets connections and I created a simple gen server for get the sound.</p>
+
+<pre><code class="language-Ruby">defmodule Chatter.Director do
+
+  use GenServer
+
+	# The sounds
+  @songs [
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/uno.m4a&quot;, &quot;category&quot; =&gt; &quot;A&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/dos.m4a&quot;, &quot;category&quot; =&gt; &quot;B&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/tres.m4a&quot;, &quot;category&quot; =&gt; &quot;C&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/cuatro.m4a&quot;, &quot;category&quot; =&gt; &quot;D&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/cinco.m4a&quot;, &quot;category&quot; =&gt; &quot;E&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/seis.m4a&quot;, &quot;category&quot; =&gt; &quot;F&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/siete.m4a&quot;, &quot;category&quot; =&gt; &quot;G&quot;},
+    %{&quot;song&quot; =&gt; &quot;http://carlogilmar.me/ocho.m4a&quot;, &quot;category&quot; =&gt; &quot;H&quot;}
+  ]
+
+  def start_link() do
+    GenServer.start_link(__MODULE__, [], [name: __MODULE__])
+  end
+
+	# I have to call this function for get a sound
+  def suscribe() do
+    GenServer.call( __MODULE__, :suscribe)
+  end
+
+  def init(_) do
+		# Start the counter in 0 for serve the first sound
+    {:ok, {:counter, 0} }
+  end
+
+  def handle_call( :suscribe, _, {:counter, counter} ) do
+		# I serve the song and update the counter
+    { counter, song, next_counter } = suscribe_song( counter )
+    {:reply, {counter, song}, {:counter, next_counter}}
+  end
+
+	# The counter cannot be more greater than 7
+
+  def suscribe_song( 8 ) do
+    [ first_song | _ ] = @songs
+    { 0, first_song, 1 }
+  end
+
+  def suscribe_song( current_counter ) do
+    song = Enum.at( @songs, current_counter)
+    { current_counter, song, current_counter + 1 }
+  end
+
+end
+</code></pre>
+
+<p><img src="/blog/blog/iot/tres.png" alt="" /></p>
+
+<h4 id="getting-a-sound-per-user-connected">Getting a sound per user connected</h4>
+
+<p>I used the channels because It has a function handle_join when somebody create a new connection, so it’s easy identify this moment.</p>
+
+<pre><code>  def join(&quot;room:lobby&quot;, _, socket) do
+    Logger.info &quot;:: Join to room:lobby ::&quot;, ansi_color: :green
+    { _, current_user} = Director.suscribe() # I get the sound and send to the client
+    {:ok, current_user, socket}
+  end
+</code></pre>
+
+<p>For know more about Sockets in Phoenix you could visit my <a href="http://carlogilmar.me/post/phoenix-sockets/">last post</a></p>
+
+<h4 id="client-side">Client side</h4>
+
+<p><img src="/blog/blog/iot/seis.png" alt="" /></p>
+
+<p>For play and stop music I implement the Howler JS library in the client side from Phoenix. When a user is getting connected, the app assign a sound.</p>
+
+<p>Using the broadcast messaging I could send strings, and in the client side I play different actions:</p>
+
+<ul>
+<li><strong>Start</strong>: Start to play every sound in every user connection</li>
+<li><strong>Play</strong>: Put the volume in 1.</li>
+<li><strong>Stop</strong>: Put the volume in 0.</li>
+<li><strong>Reload</strong>: Reload the browser.</li>
+<li><strong>Current Letter</strong>: Play only a sound.</li>
+</ul>
+
+<h5 id="note-i-have-one-trouble-using-phoenix-in-the-raspberry-pi-that-was-installing-node-js">NOTE: I have one trouble using Phoenix in the Raspberry Pi, that was installing Node JS.</h5>
+
+<h2 id="connect-the-arduino-and-the-raspberry-pi-nerves-uart">Connect the Arduino and the Raspberry Pi: Nerves UART</h2>
+
+<p>So, at this point I have a simple circuit running on the <strong>Arduino</strong>, and a <strong>Phoenix Web App</strong>. The next step is connect both. For this purpose I used <a href="https://github.com/nerves-project/nerves_uart">Nerves UART Projet</a>.</p>
+
+<p><img src="/blog/blog/iot/cuatro.png" alt="" /></p>
+
+<p>For understand how it works, read the documentation is enough.</p>
+
+<h4 id="nerves-uart">Nerves UART</h4>
+
+<pre><code>iex&gt; Nerves.UART.enumerate
+%{&quot;COM14&quot; =&gt; %{description: &quot;USB Serial Port&quot;, manufacturer: &quot;FTDI&quot;, product_id: 24577,
+    vendor_id: 1027},
+  &quot;COM5&quot; =&gt; %{description: &quot;Prolific USB-to-Serial Comm Port&quot;,
+    manufacturer: &quot;Prolific&quot;, product_id: 8963, vendor_id: 1659},
+  &quot;COM16&quot; =&gt; %{description: &quot;Arduino Uno&quot;,
+    manufacturer: &quot;Arduino LLC (www.arduino.cc)&quot;, product_id: 67, vendor_id: 9025}}
+
+iex&gt; {:ok, pid} = Nerves.UART.start_link
+{:ok, #PID&lt;0.132.0&gt;}
+
+iex&gt; Nerves.UART.open(pid, &quot;COM14&quot;, speed: 115200, active: false)
+:ok
+
+iex&gt; Nerves.UART.write(pid, &quot;Hello there\r\n&quot;)
+:ok
+
+iex&gt; Nerves.UART.read(pid, 60000)
+{:ok, &quot;Hi&quot;}
+</code></pre>
+
+<p><strong>Nerves UART</strong> help to build the communication bridge between the arduino and the elixir app.</p>
+
+<h5 id="note-i-have-some-troubles-connecting-the-arduino-with-my-macos-so-i-tested-it-directly-in-the-raspberry-pi-and-it-works">NOTE: I have some troubles connecting the arduino with my MacOS. So I tested it directly in the raspberry pi and It works.</h5>
+
+<p>So, the interesting part about this was implement the <strong>UART</strong> with the <strong>Phoenix app</strong>. For this I implemented a <strong>GenServer</strong> for get the port pidm.</p>
+
+<h4 id="uart-genserver">UART GenServer</h4>
+
+<p>I created a GenServer for get the pidm from the opened port, so in the <strong>init</strong> function I open the port and keep the port as the state. With this pidm I could send messages to this port using the UART write function.</p>
+
+<pre><code>def init(_) do
+	{:ok, uart_pid} = Nerves.UART.start_link
+	port = Nerves.UART.open( uart_pid, &quot;ttyACM0&quot;, speed: 9600, active: false)
+	Nerves.UART.configure(uart_pid, framing: {Nerves.UART.Framing.Line, separator: &quot;\r\n&quot;})
+	loop()
+	{:ok, uart_pid}
+end
+
+
+def handle_call( :get_uart, _, state ) do
+	# state is the uart_pid
+	{:reply, state, state}
+end
+</code></pre>
+
+<h4 id="read-the-serial-port-with-uart">Read the Serial Port with UART</h4>
+
+<p>The main idea is send messages, as strings, from the arduino to the phoenix app. For make this possible I had to read the serial port for receive the signals, and send as broadcast to every socket connection.</p>
+
+<p>For this I created a <strong>loop function</strong> for read every second the serial port, and send the signal as broadcast to the channels.</p>
+
+<pre><code> defp loop() do
+   send self(), :loop
+ end
+
+def handle_info(:loop, state) do
+  {:ok, message_from_arduino} = Nerves.UART.read( state, 1000 )
+  RoomChannel.send_broadcast( message_from_arduino )
+  loop()
+  {:noreply, state}
+end
+</code></pre>
+
+<p>With all of this I could connect everything and make the little demo. I built a simple device connecting all of this as a example of how IoT works.</p>
+
+<p><img src="/blog/blog/iot/cinco.png" alt="" /></p>
+
+<h2 id="bonus-telegram">Bonus: Telegram</h2>
+
+<p>I used <a href="https://github.com/rockneurotiko/ex_gram">Telegram Bot API</a> for connect a Telegram Bot for send messages to the sockets connections.</p>
+
+<h2 id="finally">Finally</h2>
+
+<p>At the end of the day I want to use the <strong>Arduino</strong> for send signals to the web application built with Phoenix. Installing this framework in the Raspberry Pi is so great, because you could implement everything that you know, as an example, I connected Telegram as other device for send messages.</p>
+
+<p>The web app is simple: create distribuited music melody based on 8 sounds from Launchpad.</p>
+
+<h3 id="features">Features:</h3>
+
+<h4 id="start">Start</h4>
+
+<ul>
+<li>Every user has a different sound.</li>
+<li>When a user enter to the webapp, the arduino start to play the leds.</li>
+</ul>
+
+<h4 id="photo-resistance">Photo-resistance</h4>
+
+<ul>
+<li>When turn-off the light, all devices start to play their sound.</li>
+<li>When turn-off the light, start to turn-on the leds.</li>
+<li>When turn-on the light, all devices stop their sound.</li>
+</ul>
+
+<h4 id="membrance-module">Membrance module</h4>
+
+<ul>
+<li>When touch a letter in the membrance module, all devices with this letter start to play their sound.</li>
+<li>When touch the play button in the membrance module, all devices start to play their sound.</li>
+<li>When touch the stop button in the membrance module, all devices stop their sound.</li>
+<li>When touch the reload button in the membrance module, all devices reload their connection and get a new letter.</li>
+</ul>
+
+<h4 id="telegram">Telegram</h4>
+
+<ul>
+<li>Send a message for start to play all sounds, stop, reload, and play every sound.</li>
+</ul>
+
+<h2 id="thanks-for-reading">Thanks for reading!</h2>
+
+<h3 id="don-t-forget-see-the-demo">Don&rsquo;t forget see the demo!!</h3>
+
+<h3 id="demo-https-www-youtube-com-watch-v-me1tffhmppm-feature-youtu-be-1"><a href="https://www.youtube.com/watch?v=me1TFfHmpPM&amp;feature=youtu.be">DEMO</a></h3>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <nav class="nav sharing-icons">
+			<h4 style="font-family: 'Lobster', cursive;">share it</h4> &nbsp; &nbsp; &nbsp;
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2flearning-iot%2f" title="Share on Facebook">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-facebook"></i> </span>
+	 		</a>
+
+			<a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2flearning-iot%2f" title="Share on LinkedIn">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-linkedin"></i> </span>
+			</a>
+
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2flearning-iot%2f&amp;text=Learning%20IoT%3a%20First%20Steps%20with%20Elixir" title="Tweet this">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-twitter-square"></i> </span>
+			</a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "carlogilmar-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module text-center">
+    <img src="http://carlogilmar.xyz/blog/img/carlogilmar.png" width="100%"/>
+		<p>
+		<a href="https://github.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-github"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://twitter.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"><i class="fab fa-twitter"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://githubcampus.expert/carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-font-awesome-flag"></i> </span>
+		</a>
+		&nbsp;&nbsp;
+		<a href="https://medium.com/@carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-medium"></i> </span>
+		</a>
+		</p>
+
+		<a href="http://carlogilmar.xyz/" class="btn text-white btn-sm" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-blog" aria-hidden="true"></i> Personal Site </span> </a>
+		<br>
+		<br>
+		<a href="http://carlogilmar.xyz/gallery" class="btn btn-sm text-white" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-camera-retro"></i> Gallery </span> </a>
+
+  </section>
+  
+
+	
+	  <section class="sidebar-module">
+    <h4 style="font-family: 'Lobster', cursive;" class="text-center">recent posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/blog/posts/learning-iot/"> <i class="fas fa-check"></i> Learning IoT: First Steps with Elixir</a></li>
+
+<li><a href="/blog/posts/learning-swift/"> <i class="fas fa-check"></i> Learning Swift</a></li>
+
+<li><a href="/blog/posts/ember-call/"> <i class="fas fa-check"></i> Ember 2018 Roadmap: A call for blog post</a></li>
+
+<li><a href="/blog/posts/learning-puppet/"> <i class="fas fa-check"></i> Learning Puppet</a></li>
+
+<li><a href="/blog/posts/ember-first/"> <i class="fas fa-check"></i> Ember JS First Steps</a></li>
+
+    </ol>
+  </section>
+
+	
+
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer" style="background-color: #c2082a;">
+      
+      <p style="color: #FFFFFF;">This blog was created in 2016 for share my experiencies, knowledge and learning experiences. <br> For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. <br> Thank you for visit my content. <br> <strong> Last updated: June, 2019.</strong></p>
+      
+    </footer>
+    <footer style="background-color:#F3A851;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    <footer style="background-color:#000000;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    
+
+  </body>
+
+</html>
