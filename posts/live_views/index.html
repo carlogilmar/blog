@@ -31,7 +31,7 @@ In the next sections I&rsquo;ll explain what is and how I understood that this w
   "@type": "BlogPosting",
   "headline": "Phoenix Live Views",
   "url": "http:\/\/carlogilmar.xyz\/blog\/posts\/live_views\/",
-  "wordCount": "1280",
+  "wordCount": "1302",
   "datePublished": "2019-09-06T00:00:00\x2b00:00",
   "dateModified": "2019-09-06T00:00:00\x2b00:00",
   "author": {
@@ -163,7 +163,7 @@ if (!doNotTrack) {
 <p>When we are opening an url in the browser for show our <strong>Live View</strong> there happening many things:</p>
 
 <ol>
-<li>A regular <code>HTTP Request</code> is sended</li>
+<li>A regular <code>HTTP Request</code> is sent</li>
 <li>The assets are rendered</li>
 <li>The <strong>Live View</strong> provides a signed <strong>session data</strong></li>
 <li>This <strong>session data</strong> is stored on the client</li>
@@ -280,7 +280,7 @@ if (!doNotTrack) {
     	<span style="color:#f92672">]</span>
   }</code></pre></div>
 
-<p>The <code>Live View Engine</code> is the module which generate this structs then to process a <code>.leex</code> file. This flow allow to identify which parts will be dynamic and sended to the client for update the view.</p>
+<p>The <code>Live View Engine</code> is the module which generate this structs then to process a <code>.leex</code> file. This flow allow to identify which parts will be dynamic and sent to the client for update the view.</p>
 
 <p>If we see how the Engine works, we have to execute the compiler from the iEX for
 <code>Phoenix.LiveView.Engine.compile &quot;path/to/your/file.leex&quot;, 0</code>, we can test simple templates:</p>
@@ -302,7 +302,7 @@ if (!doNotTrack) {
 
 <h2 id="client-live-view">Client Live View</h2>
 
-<p>This project contains some code writted in Javascript, although you only have to connect the socket for implement a Live View, there are three goals:</p>
+<p>This project contains some code wrote in Javascript, although you only have to connect the socket for implement a Live View, there are three goals:</p>
 
 <ol>
 <li>Store the session signed, and manage the socket connection</li>
@@ -319,6 +319,8 @@ if (!doNotTrack) {
 <p>If you see how the Live View are working, you have to open the HTML Elements tab in your browser and see how only the dynamic parts of the template are updating.</p>
 
 <iframe src="https://share.getcloudapp.com/mXuEQRYx?branding=true&amp;embed=true&amp;title=true" width="575" height="400" style="border:none" frameborder="0" allowtransparency="true" allowfullscreen="true">              </iframe>
+
+<p>For make this possible Live Views are using a project MorphDOM, a JS library for update the DOM without a Virtual DOM.</p>
 
 <h2 id="elixir-meetup-cdmx">Elixir Meetup CDMX</h2>
 
