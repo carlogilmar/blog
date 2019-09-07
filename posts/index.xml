@@ -7,10 +7,22 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>This blog was created in 2016 for share my experiencies, knowledge and learning experiences. &lt;br&gt; For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. &lt;br&gt; Thank you for visit my content. &lt;br&gt; &lt;strong&gt; Last updated: June, 2019.&lt;/strong&gt;</copyright>
-    <lastBuildDate>Wed, 12 Sep 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Sep 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://carlogilmar.xyz/blog/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Phoenix Live Views</title>
+      <link>http://carlogilmar.xyz/blog/posts/live_views/</link>
+      <pubDate>Fri, 06 Sep 2019 00:00:00 +0000</pubDate>
+      
+      <guid>http://carlogilmar.xyz/blog/posts/live_views/</guid>
+      <description>The content below was generated for prepare a talk for the Elixir Meetup in CDMX 🇲🇽
+All the drawings were drew my me.
+The Phoenix Live Views is an open-source project created since last October, 2018. The core maintainers are Chris McCord, Jose Valim, Alex Garibay, Gary Rennie and Scott Newcomer. Join to the Elixir Community Slack!
+In the next sections I&amp;rsquo;ll explain what is and how I understood that this works 😅.</description>
+    </item>
     
     <item>
       <title>Learning IoT: First Steps with Elixir</title>

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Phoenix Live Views" />
+<meta property="og:description" content="The content below was generated for prepare a talk for the Elixir Meetup in CDMX 🇲🇽
+All the drawings were drew my me.
+The Phoenix Live Views is an open-source project created since last October, 2018. The core maintainers are Chris McCord, Jose Valim, Alex Garibay, Gary Rennie and Scott Newcomer. Join to the Elixir Community Slack!
+In the next sections I&rsquo;ll explain what is and how I understood that this works 😅." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://carlogilmar.xyz/blog/posts/live_views/" />
+<meta property="article:published_time" content="2019-09-06T00:00:00&#43;00:00"/>
+<meta property="article:modified_time" content="2019-09-06T00:00:00&#43;00:00"/>
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Phoenix Live Views"/>
+<meta name="twitter:description" content="The content below was generated for prepare a talk for the Elixir Meetup in CDMX 🇲🇽
+All the drawings were drew my me.
+The Phoenix Live Views is an open-source project created since last October, 2018. The core maintainers are Chris McCord, Jose Valim, Alex Garibay, Gary Rennie and Scott Newcomer. Join to the Elixir Community Slack!
+In the next sections I&rsquo;ll explain what is and how I understood that this works 😅."/>
+<meta name="generator" content="Hugo 0.55.6" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Phoenix Live Views",
+  "url": "http:\/\/carlogilmar.xyz\/blog\/posts\/live_views\/",
+  "wordCount": "1280",
+  "datePublished": "2019-09-06T00:00:00\x2b00:00",
+  "dateModified": "2019-09-06T00:00:00\x2b00:00",
+  "author": {
+    "@type": "Person",
+    "name": "@carlogilmar"
+  },
+  "keywords": "programming, phoenix, elixir"
+}
+</script>
+
+
+
+    <link rel="canonical" href="http://carlogilmar.xyz/blog/posts/live_views/">
+
+    <title>Blog de Phoenix Live Views | @carlogilmar</title>
+		<link rel="icon" type="image/png" href="http://carlogilmar.xyz/blog/img/carlogilmar.png">
+
+    
+    <!-- combined, minified CSS -->
+    <link href="http://carlogilmar.xyz/blog/css/style.css" rel="stylesheet" integrity="sha384-G5B34w7DFTumWTswxYzTX7NWfbvQEg1HbFFEg6ItN03uTAAoS2qkPS/fu3LhuuSA" crossorigin="anonymous">
+    
+
+    <!-- RSS 2.0 feed -->
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-90617617-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+    
+    <link href="https://fonts.googleapis.com/css?family=Lobster&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/29fa38b43f.js"></script>
+
+    
+
+  </head>
+
+  <body>
+
+    <div class="row" style="background-color: #001C20; height: 15px;"></div>
+    <div class="row" style="background-color: #F3A851; height: 15px;"></div>
+    
+
+    <div class="blog-masthead" style="background-color: #c2082a;">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="http://carlogilmar.xyz/blog/"><b>H O M E</b></a>
+        </nav>
+      </div>
+    </div>
+
+    
+
+    
+    
+    <header>
+      <div class="container">
+        <h1 style="font-family: 'Lobster', cursive;" dir="auto"><a href="http://carlogilmar.xyz/" rel="home">@carlogilmar</a></h1>
+        <p class="lead blog-description" dir="auto"><small>Blog for share my learning experience as software developer since 2016.</small></p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="http://carlogilmar.xyz/blog/posts/live_views/">Phoenix Live Views</a></h2>
+    <p class="blog-post-meta"><time datetime="2019-09-06T00:00:00Z">Fri Sep 06, 2019</time> by @carlogilmar in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/blog/categories/programming" rel="category tag">programming</a>, <a href="/blog/categories/phoenix" rel="category tag">phoenix</a>, <a href="/blog/categories/elixir" rel="category tag">elixir</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/blog/tags/elixir" rel="tag">elixir</a>
+
+</p>
+  </header>
+  
+
+<p><strong>The content below was generated for prepare a talk for the Elixir Meetup in CDMX 🇲🇽</strong></p>
+
+<p><em>All the drawings were drew my me.</em></p>
+
+<p>The <strong>Phoenix Live Views</strong> is an open-source project created since last October, 2018. The core maintainers are <strong>Chris McCord, Jose Valim, Alex Garibay, Gary Rennie and Scott Newcomer</strong>. <a href="https://elixir-slackin.herokuapp.com/">Join to the Elixir Community Slack!</a></p>
+
+<p>In the next sections I&rsquo;ll explain what is and how I understood that this works 😅.</p>
+
+<h2 id="a-live-view">A live view</h2>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807754/carlogilmar/ElixirLiveViews_2_nfpzjy.png" alt="" /></p>
+
+<p>A <strong>live view</strong> could be understood as a process, this process keep an state, and modify his state if an event happens. Keep an eye here.</p>
+
+<h2 id="features-and-use-cases">Features and use cases</h2>
+
+<p>If you read the documentation you&rsquo;ll see similar content illustrated here.</p>
+
+<p>A Live View:</p>
+
+<ul>
+<li>Use the <code>Phoenix Channels</code>, and it scales well vertically and horizontally</li>
+<li>The first rendered is by regular <code>HTTP</code> request</li>
+<li>Implements diff tracking</li>
+<li>Identify static and dynamic content</li>
+<li>React faster</li>
+</ul>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807755/carlogilmar/ElixirLiveViews_3_vmuoxl.png" alt="" /></p>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807755/carlogilmar/ElixirLiveViews_5_qktpnl.png" alt="" /></p>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807755/carlogilmar/ElixirLiveViews_4_i6ei5k.png" alt="" /></p>
+
+<h2 id="life-cycle">Life Cycle</h2>
+
+<p>When we are opening an url in the browser for show our <strong>Live View</strong> there happening many things:</p>
+
+<ol>
+<li>A regular <code>HTTP Request</code> is sended</li>
+<li>The assets are rendered</li>
+<li>The <strong>Live View</strong> provides a signed <strong>session data</strong></li>
+<li>This <strong>session data</strong> is stored on the client</li>
+<li>When the client is connected it&rsquo;s time to back to the server</li>
+</ol>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807756/carlogilmar/ElixirLiveViews_7_d3s8zv.png" alt="" /></p>
+
+<ol>
+<li>Inside the Live View the <code>mount/2</code> function is called, in this function we could assign the data for render our view</li>
+<li><code>render/1</code> function is called and it&rsquo;ll send regular HTML to the client</li>
+<li>Our <strong>Live View</strong> will be completed and ready.</li>
+<li>If any event happens, the same flow will be called: 1) <code>mount/2</code> and then <code>render/1</code></li>
+</ol>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807756/carlogilmar/ElixirLiveViews_8_cfbftx.png" alt="" /></p>
+
+<h2 id="a-live-view-anatomy">A Live View Anatomy</h2>
+
+<p>With this we could model the anatomy of a live view as:</p>
+
+<ul>
+<li>An Elixir Module</li>
+<li>It contains at least the follow functions:
+
+<ul>
+<li><code>mount/2</code></li>
+<li><code>render/1</code></li>
+</ul></li>
+<li>It&rsquo;ll be render the content identified by the sigil <code>~L</code> or by a template <code>.leex</code>(remember that a template needs a view for works)</li>
+</ul>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807756/carlogilmar/ElixirLiveViews_9_pn8of2.png" alt="" /></p>
+
+<h2 id="live-view-setup">Live View Setup</h2>
+
+<p>For make the setup you&rsquo;ll have to follow some steps: create your live view module, config a signing salt, create the socket <code>live</code> in your <code>Endpoint</code>, set as route in the <code>Router</code> or invoke in normal views, and finally connect the socket from the client in <code>JS</code>, you&rsquo;ll use JavaScript for only this step.</p>
+
+<p><img src="https://res.cloudinary.com/carlogilmar/image/upload/v1567807755/carlogilmar/ElixirLiveViews_10_bcq6ma.png" alt="" /></p>
+
+<p>When I was learning how to implement Live Views I followed many tutorials availables in the web, and I decided to use my Learning Drive Development flow using my version control, so while I&rsquo;m following the tutorial and I was doing the setup step by step I created a git commit per step, with this way I&rsquo;ll be able to remember the steps and the code enough for every step. 😎</p>
+
+<p>At the end of the  day I write this commits:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">* 192c3cd  Step <span style="color:#ae81ff">9</span> Import live css
+* 011d500  Step <span style="color:#ae81ff">8</span>: Enable live reload in dev mode
+* 5907daa  Step <span style="color:#ae81ff">7</span>: Connecting the socket in app.js
+* f02fdaf  Step <span style="color:#ae81ff">6</span>: Adding JS live view dependency
+* c493485  Step <span style="color:#ae81ff">5</span> Adding websocket in endpoint
+* 196edd9  Step <span style="color:#ae81ff">4</span>: Adding imports in main Web file
+* 979d855  Step <span style="color:#ae81ff">3</span>: Adding plugs in router
+* 942aff2  Step <span style="color:#ae81ff">2</span> Adding signing salt and engine template
+* ecb8c8d  Step <span style="color:#ae81ff">1</span>: Adding live view dep
+* 124a1bd  First commit</code></pre></div>
+
+<p>If you want to follow this setup you have to clone my repo or see on GitHub and make a <code>git show</code> of every commit, or only see the commit content: <a href="https://github.com/carlogilmar/live_view_demo/commits/master">GitHub Repository</a></p>
+
+<p>I learned this after read the documentation. I drew all the illustrations for understand better, this is my method for learn something, actually I opened an <a href="https://github.com/phoenixframework/phoenix_live_view/issues/316">Issue</a> on the official repo at GitHub for try to become this images as open source contribution.</p>
+
+<h2 id="exploring-the-repository">Exploring the repository</h2>
+
+<p>When I&rsquo;m learning a new <strong>open source technology</strong> I learned to explore the repository, create a fork, and try to understand what&rsquo;s happening there. With Elixir this practice is more funny because you have the <strong>IEx Shell!</strong> So I was very interested in discover how people as <strong>Jose Valim and Chris</strong> are creating elixir applications, so I decided to explore the <strong>git commit history</strong> and try to understand when and how the Live View project was developed. <strong>This experience is so valuable because with this way you&rsquo;re understanding how the authors created a piece of software, and then you&rsquo;re learning how they are writting software.</strong> And also using a tool as <strong>git</strong> you&rsquo;re able to discover some behaviours and patterns in the way of how a project was developed based on his version control history.</p>
+
+<p>Exploring the commit history I found something like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">* efb06a8  hace <span style="color:#ae81ff">9</span> meses Chris McCord Blur the focused input on form submits to ensure updates. Closes <span style="color:#75715e">#6</span>
+* 40cd244  hace <span style="color:#ae81ff">9</span> meses Chris McCord Fix focus and click bugs
+* 631f379  hace <span style="color:#ae81ff">9</span> meses GitHub Fix typo in live_view.js
+* 2584eec  hace <span style="color:#ae81ff">9</span> meses GitHub Fix typos in phoenix_live_view.ex docs
+* 2d16e59  hace <span style="color:#ae81ff">9</span> meses Chris McCord Fix keypress bug
+* 86ec0a1  hace <span style="color:#ae81ff">9</span> meses José Valim Remove unused deps from lock
+
+* 411ca1d  hace <span style="color:#ae81ff">9</span> meses José Valim Add live_eex &lt;-- 😯
+
+* b362612  hace <span style="color:#ae81ff">9</span> meses Chris McCord Fix binding bug
+* fca9fdc  hace <span style="color:#ae81ff">9</span> meses Chris McCord Set probable active element to fix safari focus issue
+* 24f0853  hace <span style="color:#ae81ff">9</span> meses Chris McCord Move to new socket change tracking
+* ae84de7  hace <span style="color:#ae81ff">9</span> meses Chris McCord Improve diff tests
+* 805edbf  hace <span style="color:#ae81ff">9</span> meses Chris McCord Fix diff tests</code></pre></div>
+
+<p>And the first commit of <strong>Jose Valim</strong> makes me feel curious about how much code contains? Well, for my surprise the first commit contains the Live View Engine and about 600 lines of code.</p>
+
+<p>This file allow me to understand something about the process implemented by a Live View, which contains tree modules:</p>
+
+<ul>
+<li>Phoenix.LiveView.Comprehension</li>
+<li>Phoenix.LiveView.Rendered</li>
+<li>Phoenix.LiveView.Engine</li>
+</ul>
+
+<p>The <code>Phoenix.LiveView.Rendered</code> is a struct  which contains the <strong>dynamic</strong> and the <strong>static</strong> part of the view.</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby"><span style="color:#f92672">%</span><span style="color:#66d9ef">Phoenix</span><span style="color:#f92672">.</span>LiveView<span style="color:#f92672">.</span>Rendered{
+  <span style="color:#e6db74">static</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;foo&#34;</span>, <span style="color:#e6db74">&#34;bar&#34;</span>, <span style="color:#e6db74">&#34;baz&#34;</span><span style="color:#f92672">]</span>,
+  <span style="color:#e6db74">dynamic</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;left&#34;</span>, <span style="color:#e6db74">&#34;right&#34;</span><span style="color:#f92672">]</span>
+}</code></pre></div>
+
+<p>It&rsquo;s important to mention that the Live View have another struct for consider a comprension:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">  <span style="color:#f92672">&lt;</span><span style="color:#e6db74">%= for point &lt;- @points do %&gt;
+</span><span style="color:#e6db74">    x: &lt;%=</span> point<span style="color:#f92672">.</span>x <span style="color:#e6db74">%&gt;
+</span><span style="color:#e6db74">    y: &lt;%= point.y %&gt;</span>
+  <span style="color:#f92672">&lt;</span><span style="color:#e6db74">% end </span> <span style="color:#f92672">%&gt;</span></code></pre></div>
+
+<p>The engine will process this as a <code>Phoenix.LiveView.Comprehension</code></p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">  <span style="color:#f92672">%</span><span style="color:#66d9ef">Phoenix</span><span style="color:#f92672">.</span>LiveView<span style="color:#f92672">.</span>Comprehension{
+    <span style="color:#e6db74">static</span>:
+  <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">  x: &#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">  y: &#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">]</span>,
+    <span style="color:#e6db74">dynamics</span>:
+  <span style="color:#f92672">[</span>
+      	<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;1&#34;</span>, <span style="color:#e6db74">&#34;2&#34;</span><span style="color:#f92672">]</span>,
+      	<span style="color:#f92672">[</span><span style="color:#e6db74">&#34;3&#34;</span>, <span style="color:#e6db74">&#34;4&#34;</span><span style="color:#f92672">]</span>
+    	<span style="color:#f92672">]</span>
+  }</code></pre></div>
+
+<p>The <code>Live View Engine</code> is the module which generate this structs then to process a <code>.leex</code> file. This flow allow to identify which parts will be dynamic and sended to the client for update the view.</p>
+
+<p>If we see how the Engine works, we have to execute the compiler from the iEX for
+<code>Phoenix.LiveView.Engine.compile &quot;path/to/your/file.leex&quot;, 0</code>, we can test simple templates:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">  <span style="color:#66d9ef">Hola</span> mundo! <span style="color:#f92672">&lt;%=</span> name <span style="color:#f92672">%&gt;</span></code></pre></div>
+
+<p>And then we&rsquo;ll see a tuple with Elixir syntax tree which represents the template compiled and ready to update in the client, in some part of this you&rsquo;ll see something like this:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-ruby" data-lang="ruby">  {<span style="color:#e6db74">:%</span>, <span style="color:#f92672">[]</span>,
+   <span style="color:#f92672">[</span>
+     {<span style="color:#e6db74">:__aliases__</span>, <span style="color:#f92672">[</span><span style="color:#66d9ef">alias</span>: <span style="color:#66d9ef">false</span><span style="color:#f92672">]</span>, <span style="color:#f92672">[</span><span style="color:#e6db74">:Phoenix</span>, <span style="color:#e6db74">:LiveView</span>, <span style="color:#e6db74">:Rendered</span><span style="color:#f92672">]</span>},
+     {<span style="color:#e6db74">:%</span>{}, <span style="color:#f92672">[]</span>,
+      <span style="color:#f92672">[</span>
+        <span style="color:#e6db74">static</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#34;Hola mundo! &#34;</span>, <span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">]</span>,
+        <span style="color:#e6db74">dynamic</span>: <span style="color:#f92672">[</span>{<span style="color:#e6db74">:arg0</span>, <span style="color:#f92672">[]</span>, <span style="color:#66d9ef">Phoenix</span><span style="color:#f92672">.</span>LiveView<span style="color:#f92672">.</span>Engine}<span style="color:#f92672">]</span>,
+        <span style="color:#e6db74">fingerprint</span>: <span style="color:#ae81ff">120129061871015969357813258734644514847</span>
+      <span style="color:#f92672">]</span>}
+   <span style="color:#f92672">]</span>}</code></pre></div>
+
+<h2 id="client-live-view">Client Live View</h2>
+
+<p>This project contains some code writted in Javascript, although you only have to connect the socket for implement a Live View, there are three goals:</p>
+
+<ol>
+<li>Store the session signed, and manage the socket connection</li>
+<li>Render and update the view</li>
+<li>Bind the events for connect with the server through events</li>
+</ol>
+
+<p>You will see a div which contains the session:</p>
+
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">data-phx-session</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SFMyNTY.g3cFAluBC0buY7Iw....&#34;</span>
+<span style="color:#a6e22e">data-phx-view</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;CounterWeb.CounterLive&#34;</span>
+<span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phx-gR6+DLO3&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;phx-connected&#34;</span>&gt;</code></pre></div>
+
+<p>If you see how the Live View are working, you have to open the HTML Elements tab in your browser and see how only the dynamic parts of the template are updating.</p>
+
+<iframe src="https://share.getcloudapp.com/mXuEQRYx?branding=true&amp;embed=true&amp;title=true" width="575" height="400" style="border:none" frameborder="0" allowtransparency="true" allowfullscreen="true">              </iframe>
+
+<h2 id="elixir-meetup-cdmx">Elixir Meetup CDMX</h2>
+
+<p>All of this content was created for share it in the local Elixir Meetup at CDMX 🇲🇽</p>
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/G2oKSjHNTlNe5d" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe>
+
+<iframe src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Fingresuelve%2Fvideos%2F611754096017791%2F&show_text=1&width=560" width="560" height="382" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media" allowFullScreen="true"></iframe>
+
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <nav class="nav sharing-icons">
+			<h4 style="font-family: 'Lobster', cursive;">share it</h4> &nbsp; &nbsp; &nbsp;
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2flive_views%2f" title="Share on Facebook">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-facebook"></i> </span>
+	 		</a>
+
+			<a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2flive_views%2f" title="Share on LinkedIn">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-linkedin"></i> </span>
+			</a>
+
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fcarlogilmar.xyz%2fblog%2fposts%2flive_views%2f&amp;text=Phoenix%20Live%20Views" title="Tweet this">
+				<span style="font-size: 1.5em; color: #c2082a;"> <i class="fab fa-twitter-square"></i> </span>
+			</a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "carlogilmar-github-io" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+  <section class="sidebar-module text-center">
+    <img src="http://carlogilmar.xyz/blog/img/carlogilmar.png" width="100%"/>
+		<p>
+		<a href="https://github.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-github"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://twitter.com/carlogilmar" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"><i class="fab fa-twitter"></i></span></a>
+		&nbsp;&nbsp;
+		<a href="https://githubcampus.expert/carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-font-awesome-flag"></i> </span>
+		</a>
+		&nbsp;&nbsp;
+		<a href="https://medium.com/@carlogilmar/" target="_blank">
+			<span style="font-size: 1.5em; color: #000000;"> <i class="fab fa-medium"></i> </span>
+		</a>
+		</p>
+
+		<a href="http://carlogilmar.xyz/" class="btn text-white btn-sm" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-blog" aria-hidden="true"></i> Personal Site </span> </a>
+		<br>
+		<br>
+		<a href="http://carlogilmar.xyz/gallery" class="btn btn-sm text-white" style="background-color: #c2082a"> <span style="font-size: 1.2em;"> <i class="fas fa-camera-retro"></i> Gallery </span> </a>
+
+  </section>
+  
+
+	
+	  <section class="sidebar-module">
+    <h4 style="font-family: 'Lobster', cursive;" class="text-center">recent posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/blog/posts/live_views/"> <i class="fas fa-check"></i> Phoenix Live Views</a></li>
+
+<li><a href="/blog/posts/learning-iot/"> <i class="fas fa-check"></i> Learning IoT: First Steps with Elixir</a></li>
+
+<li><a href="/blog/posts/learning-swift/"> <i class="fas fa-check"></i> Learning Swift</a></li>
+
+<li><a href="/blog/posts/ember-call/"> <i class="fas fa-check"></i> Ember 2018 Roadmap: A call for blog post</a></li>
+
+<li><a href="/blog/posts/learning-puppet/"> <i class="fas fa-check"></i> Learning Puppet</a></li>
+
+    </ol>
+  </section>
+
+	
+
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer" style="background-color: #c2082a;">
+      
+      <p style="color: #FFFFFF;">This blog was created in 2016 for share my experiencies, knowledge and learning experiences. <br> For any question please contact me here: carlogilmar12@gmail.com or just send me a tweet. <br> Thank you for visit my content. <br> <strong> Last updated: June, 2019.</strong></p>
+      
+    </footer>
+    <footer style="background-color:#F3A851;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    <footer style="background-color:#000000;">
+      <div class="container flex flex-wrap justify-between">
+        <div class="w-auto align-middle text-sm text-white py-2"></div>
+      </div>
+    </footer>
+    
+
+  </body>
+
+</html>

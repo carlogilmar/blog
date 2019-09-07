@@ -10,7 +10,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="http://carlogilmar.xyz/blog/posts/" />
 
-<meta property="og:updated_time" content="2018-09-12T00:00:00&#43;00:00"/>
+<meta property="og:updated_time" content="2019-09-06T00:00:00&#43;00:00"/>
 
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Posts"/>
@@ -29,7 +29,7 @@
     "@type": "Person",
     "name": "@carlogilmar"
   },
-  "dateModified": "2018-09-12T00:00:00\x2b00:00",
+  "dateModified": "2019-09-06T00:00:00\x2b00:00",
   "keywords": "agile,developer,devops,elixir,ember,git,github,gohugo,groovy,iot,javascript,jenkins,open-source,phoenix,programming,puppet,swift,tools,visual-thinking,community,devops,elixir,ember,graphic-recordings,ios,javascript,linux,phoenix,programming,ruby,scrum,slack,swift,vertx,",
   "description": "\x3csmall\x3eBlog for share my learning experience as software developer since 2016.\x3c\/small\x3e"
 }
@@ -103,6 +103,31 @@ if (!doNotTrack) {
 
           
 
+
+
+
+
+
+
+<article class="blog-post">
+  <header>
+    <h3 class="blog-post-title" dir="auto"><a href="http://carlogilmar.xyz/blog/posts/vertx_mongo_web/">Connect Vertx with MongoDB using Groovy</a></h3>
+    <p class="blog-post-meta"><time datetime="2016-10-09T12:29:51-05:00">Sun Oct 09, 2016</time> by @carlogilmar in 
+<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/blog/categories/groovy" rel="category tag">groovy</a>
+
+
+<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/blog/tags/programming" rel="tag">programming</a>, <a href="/blog/tags/vertx" rel="tag">vertx</a>
+
+</p>
+  </header>
+  <p style="font-size: 0.9em;">Create a Simple Connection With Vertx, MongoDB and Groovy  You have to install VertX 3.3.3, Groovy, and Mongo DB.
+ Create a simple groovy script
+ Include the next imports
+  import io.vertx.groovy.core.Vertx import io.vertx.groovy.ext.mongo.MongoClient   Add the configuration for Mongo DB.  def config = Vertx.currentContext().config() def uri = config.mongo_uri if (uri == null) { uri = &quot;mongodb://localhost:27017&quot; } def db = config.mongo_db if (db == null) { db = &quot;test&quot;//&lt;---------------database name } def mongoconfig = [ connection_string:uri, db_name:db ] def mongoClient = MongoClient.<p>
+  <a href='http://carlogilmar.xyz/blog/posts/vertx_mongo_web/' class="btn btn-secondary btn-sm">
+    <span style="font-size: 1em;"> Discover <i class="fas fa-arrow-circle-right"></i> </span>
+  </a>
+</article> 
 
 
 
@@ -199,32 +224,6 @@ SCRUM es un marco de trabajo ágil, quizá uno de los más populares, sin embarg
 
 
 
-
-<article class="blog-post">
-  <header>
-    <h3 class="blog-post-title" dir="auto"><a href="http://carlogilmar.xyz/blog/posts/agileplanet/">Agile Planet ScketchNotes Review</a></h3>
-    <p class="blog-post-meta"><time datetime="2016-06-09T08:53:18-06:00">Thu Jun 09, 2016</time> by @carlogilmar in 
-<i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<a href="/blog/categories/agile" rel="category tag">agile</a>
-
-
-<i class="fa fa-tag" aria-hidden="true"></i>&nbsp;<a href="/blog/tags/community" rel="tag">community</a>
-
-</p>
-  </header>
-  <p style="font-size: 0.9em;">The idea of this Lean Book is to be a travel guide to Agile Methods, this publication is a resume of many interesting topics.
-I think It&rsquo;s very helpful to have a guide like this.
-Every topic has a little resume, and a drawing like this:
-I share with you my sketchnotes &hellip;
-¡Visit LEAN PUB! You can find interesting books about agile topics&hellip;<p>
-  <a href='http://carlogilmar.xyz/blog/posts/agileplanet/' class="btn btn-secondary btn-sm">
-    <span style="font-size: 1em;"> Discover <i class="fas fa-arrow-circle-right"></i> </span>
-  </a>
-</article> 
-
-
-
-
-
 <nav class="blog-pagination">
   
   <a class="btn btn-outline-primary" href="/blog/posts/page/5/" rel="prev" role="button">Previous page</a>
@@ -274,6 +273,8 @@ I share with you my sketchnotes &hellip;
     <ol class="list-unstyled">
 
 
+<li><a href="/blog/posts/live_views/"> <i class="fas fa-check"></i> Phoenix Live Views</a></li>
+
 <li><a href="/blog/posts/learning-iot/"> <i class="fas fa-check"></i> Learning IoT: First Steps with Elixir</a></li>
 
 <li><a href="/blog/posts/learning-swift/"> <i class="fas fa-check"></i> Learning Swift</a></li>
@@ -281,8 +282,6 @@ I share with you my sketchnotes &hellip;
 <li><a href="/blog/posts/ember-call/"> <i class="fas fa-check"></i> Ember 2018 Roadmap: A call for blog post</a></li>
 
 <li><a href="/blog/posts/learning-puppet/"> <i class="fas fa-check"></i> Learning Puppet</a></li>
-
-<li><a href="/blog/posts/ember-first/"> <i class="fas fa-check"></i> Ember JS First Steps</a></li>
 
     </ol>
   </section>

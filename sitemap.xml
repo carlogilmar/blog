@@ -4,13 +4,54 @@
   
   <url>
     <loc>http://carlogilmar.xyz/blog/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>http://carlogilmar.xyz/blog/categories/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/posts/live_views/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/posts/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/tags/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/categories/elixir/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/tags/elixir/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/categories/phoenix/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://carlogilmar.xyz/blog/categories/programming/</loc>
+    <lastmod>2019-09-06T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -20,37 +61,7 @@
   </url>
   
   <url>
-    <loc>http://carlogilmar.xyz/blog/posts/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://carlogilmar.xyz/blog/tags/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://carlogilmar.xyz/blog/tags/elixir/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>http://carlogilmar.xyz/blog/categories/iot/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://carlogilmar.xyz/blog/categories/phoenix/</loc>
-    <lastmod>2018-09-12T00:00:00+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>http://carlogilmar.xyz/blog/categories/programming/</loc>
     <lastmod>2018-09-12T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -141,12 +152,6 @@
   <url>
     <loc>http://carlogilmar.xyz/blog/posts/phoenix-sockets/</loc>
     <lastmod>2018-03-30T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://carlogilmar.xyz/blog/categories/elixir/</loc>
-    <lastmod>2018-03-30T00:00:00+00:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
